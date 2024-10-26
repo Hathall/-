@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التحويل بين الهجري والميلادي</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/min/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment-hijri@2.1.1/moment-hijri.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>التحويل بين التاريخ الهجري والميلادي</h1>
+
+        <div class="section">
+            <h2>التحويل من الميلادي إلى الهجري</h2>
+            <label for="gregorianDate">أدخل التاريخ الميلادي:</label>
+            <input type="date" id="gregorianDate">
+            <button onclick="convertToHijri()">تحويل إلى الهجري</button>
+            <p id="hijriResult" class="result"></p>
+        </div>
+
+        <div class="section">
+            <h2>التحويل من الهجري إلى الميلادي</h2>
+            <label for="hijriYear">السنة الهجرية:</label>
+            <input type="number" id="hijriYear" min="1" placeholder="1445">
+            <label for="hijriMonth">الشهر الهجري:</label>
+            <input type="number" id="hijriMonth" min="1" max="12" placeholder="1">
+            <label for="hijriDay">اليوم الهجري:</label>
+            <input type="number" id="hijriDay" min="1" max="30" placeholder="1">
+            <button onclick="convertToGregorian()">تحويل إلى الميلادي</button>
+            <p id="gregorianResult" class="result"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
